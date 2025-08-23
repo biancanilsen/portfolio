@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@heroui/tooltip": "^2.2.21",
+    "i18next": "^25.3.2",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "react-i18next": "^15.6.1"
+  }
+}
