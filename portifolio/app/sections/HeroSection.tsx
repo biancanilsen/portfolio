@@ -3,6 +3,7 @@
 import { title } from "@/components/primitives";
 import ProfilePic from "../../assets/profile-bia.jpeg";
 import { useTranslation } from "react-i18next";
+import Image from 'next/image';
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -32,6 +33,13 @@ export function HeroSection() {
           </div>
           <div className="lg:w-1/2 relative order-1 lg:order-2 h-full">
             <div className="rounded-full overflow-hidden w-full h-full max-w-md max-h-md mx-auto">
+              <Image
+                src={ProfilePic}
+                alt="Bianca Nilsen"
+                fill
+                style={{ objectFit: 'cover' }} 
+                priority
+              />
               <img
                 src={ProfilePic.src}
                 alt="Bianca Nilsen"
