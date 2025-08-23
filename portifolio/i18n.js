@@ -1,7 +1,7 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import HttpApi from "i18next-http-backend";
 
 i18n
   // Carrega traduções de um backend (ex: pasta /public/locales)
@@ -13,17 +13,17 @@ i18n
   .init({
     debug: true,
     // Idiomas suportados
-    supportedLngs: ['pt', 'en'],
+    supportedLngs: ["pt", "en"],
     // Idioma padrão caso a detecção falhe
-    fallbackLng: 'pt',
+    fallbackLng: "pt",
     detection: {
       // Ordem e métodos de detecção de idioma
-      order: ['navigator', 'htmlTag', 'path', 'subdomain'],
-      caches: ['cookie'],
+      order: ["navigator", "htmlTag", "path", "subdomain"],
+      caches: ["cookie"],
     },
     // Configurações do backend para carregar os arquivos JSON
     backend: {
-      loadPath: '/locales/{{lng}}.json',
+      loadPath: "/locales/{{lng}}.json",
     },
     // O react-i18next já escapa os valores por padrão
     interpolation: {

@@ -1,8 +1,8 @@
 "use client";
 
-import { title } from '@/components/primitives';
-import ProfilePic from '../../assets/profile-bia.jpeg';
-import { useTranslation } from 'react-i18next';
+import { title } from "@/components/primitives";
+import ProfilePic from "../../assets/profile-bia.jpeg";
+import { useTranslation } from "react-i18next";
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -12,23 +12,31 @@ export function HeroSection() {
       <div className="container mx-auto px-2">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 lg:pr-12 text-left order-2 lg:order-1 mt-8 lg:mt-0">
-            <h2 className="text-xl font-light text-neutral-400">{t('greeting')}</h2>
-            
-            <span className={`${title()} text-[#6371A2]`}>Bianca Nilsen&nbsp;</span>
-            
+            <h2 className="text-xl font-light text-neutral-400">
+              {t("greeting")}
+            </h2>
+
+            <span className={`${title()} text-[#6371A2]`}>
+              Bianca Nilsen&nbsp;
+            </span>
+
             <p className="py-3 text-lg max-w-md text-neutral-400">
               {t("saudacaoInicial")}
             </p>
 
             <a href="#sobre-mim" className="btn btn-primary">
               <span className="flex items-center text-neutral-400">
-                {t('aboutMe')} <span className="ml-2">→</span>
+                {t("aboutMe")} <span className="ml-2">→</span>
               </span>
             </a>
           </div>
           <div className="lg:w-1/2 relative order-1 lg:order-2 h-full">
             <div className="rounded-full overflow-hidden w-full h-full max-w-md max-h-md mx-auto">
-              <img src={ProfilePic.src} alt="Bianca Nilsen" className="w-full h-full object-cover" />             
+              <img
+                src={ProfilePic.src}
+                alt="Bianca Nilsen"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
