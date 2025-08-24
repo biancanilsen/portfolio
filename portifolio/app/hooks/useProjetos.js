@@ -1,6 +1,6 @@
 import React from "react";
-import ProfilePic from "../../assets/github.png";
-import CheckVanImage from "../../assets/checkVan.png";
+import ProfilePic from "../../assets/githubb.webp";
+import CheckVanImage from "../../assets/checkVan.webp";
 
 export function useProjetos() {
   const projetos = [

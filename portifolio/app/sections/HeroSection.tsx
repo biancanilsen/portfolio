@@ -1,7 +1,7 @@
 "use client";
 
 import { title } from "@/components/primitives";
-import ProfilePic from "../../assets/profileBia.png";
+import ProfilePic from "../../assets/profileBia.webp";
 import { useTranslation } from "react-i18next";
 import Image from 'next/image';
 

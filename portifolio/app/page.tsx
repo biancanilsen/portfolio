@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      {/* <SobreMim /> */}
+      <SobreMim />
       <Habilidades />
       <Projetos />
     </main>
