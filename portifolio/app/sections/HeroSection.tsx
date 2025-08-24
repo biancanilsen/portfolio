@@ -1,7 +1,7 @@
 "use client";
 
 import { title } from "@/components/primitives";
-import ProfilePic from "../../assets/profile-bia.jpeg";
+import ProfilePic from "../../assets/profileBia.png";
 import { useTranslation } from "react-i18next";
 import Image from 'next/image';
 
@@ -31,17 +31,15 @@ export function HeroSection() {
               </span>
             </a>
           </div>
-          <div className="lg:w-1/2 relative order-1 lg:order-2 h-full">
-            <div className="rounded-full overflow-hidden w-full h-full max-w-md max-h-md mx-auto">
+            <div className="relative rounded-full overflow-hidden w-80 h-80 md:w-96 md:h-96 mx-auto order-1 lg:order-2">
               <Image
                 src={ProfilePic}
                 alt="Bianca Nilsen"
                 fill
-                style={{ objectFit: 'cover' }} 
+                style={{ objectFit: 'cover' }}
                 priority
               />
             </div>
-          </div>
         </div>
       </div>
     </section>
