@@ -6,8 +6,8 @@ import { SobreMim } from "./sections/SobreMim";
 export default function Home() {
   return (
     <main>
-      {/* <HeroSection /> */}
-      <SobreMim />
+      <HeroSection />
+      {/* <SobreMim /> */}
       <Habilidades />
       <Projetos />
     </main>
