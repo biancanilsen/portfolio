@@ -1,15 +1,11 @@
-import { Habilidades } from "./sections/Habilidades";
-import { HeroSection } from "./sections/HeroSection";
-import { Projetos } from "./sections/Projetos";
-import { SobreMim } from "./sections/SobreMim";
+import { Navbar } from "@/components/navbar";
+import { ClientSections } from "./sections/ClientSections";
 
 export default function Home() {
   return (
     <main>
-      <HeroSection />
-      <SobreMim />
-      <Habilidades />
-      <Projetos />
+      <Navbar />
+      <ClientSections />
     </main>
   );
 }
