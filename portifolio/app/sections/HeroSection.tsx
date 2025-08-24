@@ -40,11 +40,6 @@ export function HeroSection() {
                 style={{ objectFit: 'cover' }} 
                 priority
               />
-              <img
-                src={ProfilePic.src}
-                alt="Bianca Nilsen"
-                className="w-full h-full object-cover"
-              />
             </div>
           </div>
         </div>
