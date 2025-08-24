@@ -13,7 +13,9 @@ import { Link } from "@heroui/link";
 import { Input } from "@heroui/input";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
+import Image from 'next/image';
 import clsx from "clsx";
+import LogoPortifilioB from "../assets/logoPortifolioB.webp";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -22,7 +24,6 @@ import {
   GithubIcon,
   HeartFilledIcon,
   SearchIcon,
-  Logo,
 } from "@/components/icons";
 
 export const Navbar = () => {
@@ -52,8 +53,15 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <div className="relative w-10 h-10">
+              <Image
+                src={LogoPortifilioB}
+                alt="Logo Bianca Nilsen"
+                fill
+                style={{ objectFit: 'contain' }} 
+                priority
+              />
+            </div>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
