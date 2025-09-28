@@ -1,11 +1,11 @@
 # Portfólio Pessoal - Bianca Nilsen
 
 > Projeto desenvolvido para ser meu cartão de visitas digital, centralizando minhas habilidades, projetos e formas de contato.
-
 <div align="center">
-  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGlwaHF5a3I5NG9pc2pwejM5c2dvZW0zMGNoc3ZiMW5ncmszdDRmZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j4tkXKMHSJaeTpx4a6/giphy.gif" alt="Demonstração do Portfólio" width="200"/>
+  <a href="https://portifolio-bianca-bz07ct2wy-bianca-nilsens-projects.vercel.app" target="_blank">
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGlwaHF5a3I5NG9pc2pwejM5c2dvZW0zMGNoc3ZiMW5ncmszdDRmZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j4tkXKMHSJaeTpx4a6/giphy.gif" alt="Demonstração do Portfólio" width="200"/>
+  </a>
 </div>
-
 
 ## 📝 Sobre o Projeto
 
@@ -43,7 +43,7 @@ O projeto foi construído utilizando as seguintes tecnologias web:
 
 Para visualizar o portfólio, basta acessar o link abaixo publicado com o GitHub Pages:
 
-🔗 **[https://portifolio-bianca-bz07ct2wy-bianca-nilsens-projects.vercel.app/]**
+🔗 **[https://portifolio-bianca-bz07ct2wy-bianca-nilsens-projects.vercel.app/](https://portifolio-bianca-bz07ct2wy-bianca-nilsens-projects.vercel.app/)**
 
 Caso queira executar o projeto localmente, siga os passos:
 
