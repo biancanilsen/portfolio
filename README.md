@@ -44,7 +44,7 @@ O projeto foi construído utilizando as seguintes tecnologias web:
 
 Para visualizar o portfólio, basta acessar o link abaixo publicado com o GitHub Pages:
 
-🔗 **[https://portifolio-bianca-bz07ct2wy-bianca-nilsens-projects.vercel.app/]()**
+🔗 **[https://portifolio-bianca-bz07ct2wy-bianca-nilsens-projects.vercel.app/](https://portifolio-bianca-bz07ct2wy-bianca-nilsens-projects.vercel.app/)**
 
 Caso queira executar o projeto localmente, siga os passos:
 
