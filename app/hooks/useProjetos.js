@@ -1,21 +1,22 @@
 import React from "react";
 import ProfilePic from "../../assets/githubb.webp";
 import CheckVanImage from "../../assets/checkVan.webp";
+import EncurtadorURLImage from "../../assets/encurtadorURL.png";
 
 export function useProjetos() {
   const projetos = [
     {
       title: "CHECK VAN",
       description:
-        "O Check Van é o aplicativo completo que conecta pais e motoristas para simplificar e trazer mais segurança à rotina do transporte escolar. Com ele, é possível gerar rotas otimizadas, gerenciar alunos, organizar viagens e muito mais, tudo na palma da sua mão.",
+        "Aplicativo completo que conecta pais e motoristas para simplificar e trazer mais segurança à rotina do transporte escolar. Com ele, é possível gerar rotas otimizadas, gerenciar alunos, organizar viagens e muito mais, tudo na palma da sua mão.",
       imageSrc: CheckVanImage,
       link: "https://github.com/biancanilsen/CheckVanFrontend",
     },
     {
-      title: "TODO - Sistemas distribuídos",
-      description: "TODO",
-      imageSrc: ProfilePic,
-      link: "#",
+      title: "Encurtador de URL com microsserviços",
+      description: "Cistema de encurtamento de URLs construído com uma arquitetura de microsserviços em Java. O projeto explora a comunicação entre serviços independentes (API Gateway, Link Service, Redirect Service) orquestrados com Docker Compose",
+      imageSrc: EncurtadorURLImage,
+      link: "https://github.com/biancanilsen/encurtador-url",
     },
     {
       title: "TODO - DDD",

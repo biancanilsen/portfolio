@@ -51,9 +51,9 @@ var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.v((parentImport) => {
     return Promise.all([
-  "static/chunks/node_modules_@heroui_dom-animation_dist_index_mjs_e4f0cad3._.js",
-  "static/chunks/node_modules_0b55008e._.js",
-  "static/chunks/_a3daa6eb._.js",
+  "static/chunks/node_modules_@heroui_dom-animation_dist_index_mjs_c4d8bd39._.js",
+  "static/chunks/node_modules_7cc74380._.js",
+  "static/chunks/_63893f3b._.js",
   "static/chunks/app_sections_Projetos_tsx_04cc0f01._.js"
 ].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
         return parentImport("[project]/app/sections/Projetos.tsx [app-client] (ecmascript, next/dynamic entry)");

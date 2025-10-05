@@ -18,9 +18,9 @@ export function Projetos() {
           {projetos.map((projeto, index) => (
             <Card
               key={index}
-              className="group bg-neutral-800 text-white cursor-pointer
+              className="group bg-neutral-800 text-white
                          hover:bg-[#6371A2] hover:text-black
-                         transition-colors duration-300"
+                         transition-colors duration-300 flex flex-col"
             >
               <CardHeader className="flex justify-center">
                 <div className="relative w-full h-48 overflow-hidden rounded-md">
@@ -32,19 +32,20 @@ export function Projetos() {
                   />
                 </div>
               </CardHeader>
-              <CardBody className="p-6">
-                <h3 className="font-bold text-lg mb-2">{projeto.title}</h3>
-                <Tooltip></Tooltip>
-                <p className="text-sm text-neutral-400 group-hover:text-neutral-800 transition-colors duration-300 leading-relaxed">
-                  {projeto.description.substring(0, 100)}...
+              <CardBody className="p-6 flex-grow">
+                <h3 className="font-bold text-lg mb-2 overflow-hidden whitespace-nowrap text-ellipsis" title={projeto.title}>
+                  {projeto.title}
+                </h3>
+                <p className="text-sm text-neutral-400 group-hover:text-neutral-800 transition-colors duration-300 text-ellipsis" title={projeto.description}>
+                  {projeto.description}
                 </p>
               </CardBody>
-              <CardFooter className="justify-center p-4">
+              <CardFooter className="justify-center py-4">
                 <Link
                   href={projeto.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-semibold text-[#998684] group-hover:text-black transition-colors duration-300"
+                  className="text-sm font-semibold text-[#998684] group-hover:text-black transition-colors duration-300 cursor-pointer"
                 >
                   Ver detalhes
                 </Link>

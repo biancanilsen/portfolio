@@ -6687,11 +6687,6 @@
     background-color: hsl(var(--heroui-warning-200) / 1);
   }
 
-  .data-\[active\=true\]\:font-medium[data-active="true"] {
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
-  }
-
   .data-\[active\=true\]\:font-semibold[data-active="true"] {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
@@ -6703,10 +6698,6 @@
 
   .data-\[active\=true\]\:text-default-foreground[data-active="true"] {
     color: hsl(var(--heroui-default-foreground) / 1);
-  }
-
-  .data-\[active\=true\]\:text-primary[data-active="true"] {
-    color: hsl(var(--heroui-primary) / 1);
   }
 
   .data-\[active\=true\]\:text-primary-foreground[data-active="true"] {
