@@ -14,7 +14,7 @@ export function useProjetos() {
     },
     {
       title: "Encurtador de URL com microsserviços",
-      description: "Cistema de encurtamento de URLs construído com uma arquitetura de microsserviços em Java. O projeto explora a comunicação entre serviços independentes (API Gateway, Link Service, Redirect Service) orquestrados com Docker Compose",
+      description: "Sistema de encurtamento de URLs construído com uma arquitetura de microsserviços em Java. O projeto explora a comunicação entre serviços independentes (API Gateway, Link Service, Redirect Service) orquestrados com Docker Compose",
       imageSrc: EncurtadorURLImage,
       link: "https://github.com/biancanilsen/encurtador-url",
     },
