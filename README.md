@@ -2,7 +2,7 @@
 
 > Projeto desenvolvido para ser meu cartão de visitas digital, centralizando minhas habilidades, projetos e formas de contato.
 <div align="center">
-  <a href="https://portifolio-bianca-bz07ct2wy-bianca-nilsens-projects.vercel.app/" target="_blank">
+  <a href="[https://portifolio-bianca-bz07ct2wy-bianca-nilsens-projects.vercel.app/](https://portifolio-bianca-rho.vercel.app/#sobre-mim)" target="_blank">
     <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGlwaHF5a3I5NG9pc2pwejM5c2dvZW0zMGNoc3ZiMW5ncmszdDRmZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j4tkXKMHSJaeTpx4a6/giphy.gif" alt="Demonstração do Portfólio" width="200"/>
   </a>
 </div>
