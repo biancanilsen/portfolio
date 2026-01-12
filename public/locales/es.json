@@ -1,3 +1,15 @@
 {
-  "sejaBemVindo": ""
+  "greeting": "¡Hola! Mi nombre es",
+  "saudacaoInicial": "Soy una desarrolladora de software impulsada por crear soluciones innovadoras y eficientes. Mi objetivo es transformar ideas en realidad a través del código, construyendo aplicaciones que impacten positivamente la vida de las personas. Navega por mi portafolio para conocer mis proyectos y habilidades.",
+  "aboutMe": "Sobre mí",
+  "sejaBemVindo": "Te doy la bienvenida a mi portafolio. Conoce mi trayectoria:",
+  "minhaTragetoria": "años de experiencia en desarrollo de software. La capacidad de construir algo funcional y hermoso desde cero es lo que me motiva como desarrolladora de software. Mi trayectoria profesional se ha centrado en el desarrollo de aplicaciones web robustas y escalables, siempre con el compromiso de entregar la mejor experiencia para el usuario final. Creo que la colaboración y la comunicación son tan importantes como un código bien escrito. Por eso, en mis proyectos, siempre busco entender a fondo el problema a resolver, trabajando de forma ágil y en sintonía con el equipo. Soy una entusiasta de las buenas prácticas de desarrollo, como código limpio (Clean Code) y pruebas automatizadas, pues entiendo que la calidad del software es fundamental para su éxito a largo plazo.",
+  "desenvolvimentoFrontendModerno": "Desarrollo Front-End Moderno",
+  "arquiteturaBackend": "Arquitectura Back-End y APIs",
+  "resolucaoProblemas": "Resolución de Problemas y Arquitectura de Software",
+  "tenhoAbordagemAnalitica": "Tengo un enfoque analítico para descomponer problemas complejos y diseñar soluciones de software limpias, eficientes y escalables. Valoro el código bien estructurado, la aplicación de patrones de diseño y la colaboración para construir productos de alta calidad.",
+  "desenvolvoLogicaServidor": "Desarrollo la lógica del servidor, la seguridad y la infraestructura que sustentan las aplicaciones. Soy competente en la construcción de APIs REST robustas y escalables utilizando Java.",
+  "crioInterfaces": "Creo interfaces de usuario fluidas y responsivas con enfoque en la experiencia de usuario (UX). Tengo sólida experiencia con React.js, transformando diseños complejos en componentes reutilizables y de alto rendimiento.",
+  "comunicacaoColaboracaoAgil": "Comunicación y Colaboración Ágil",
+  "comunicacaoClaraBase": "Creo que la comunicación clara es la base para el éxito de un proyecto. Trabajo de forma colaborativa en equipos multidisciplinarios (desarrolladores, diseñadores, PMs), utilizando metodologías ágiles para alinear objetivos técnicos con las metas de negocio y entregar valor continuo."
 }

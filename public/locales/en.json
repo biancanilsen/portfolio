@@ -1,1 +1,15 @@
-{}
+{
+  "greeting": "Hello! My name is",
+  "saudacaoInicial": "I am a software developer driven by creating innovative and efficient solutions. My goal is to turn ideas into reality through code, building applications that positively impact people's lives. Browse my portfolio to explore my projects and skills.",
+  "aboutMe": "About Me",
+  "sejaBemVindo": "Welcome to my portfolio. Discover my journey:",
+  "minhaTragetoria": "years of experience in software development. The ability to build something functional and beautiful from scratch is what drives me as a software developer. My professional journey has been focused on developing robust and scalable web applications, always committed to delivering the best experience for the end user. I believe that collaboration and communication are just as important as well-written code. Therefore, in my projects, I always seek to deeply understand the problem to be solved, working in an agile manner and in sync with the team. I am an enthusiast of development best practices, such as Clean Code and automated testing, as I understand that software quality is fundamental to its long-term success.",
+  "desenvolvimentoFrontendModerno": "Modern Front-End Development",
+  "arquiteturaBackend": "Back-End Architecture and APIs",
+  "resolucaoProblemas": "Problem Solving and Software Architecture",
+  "tenhoAbordagemAnalitica": "I have an analytical approach to decomposing complex problems and designing clean, efficient, and scalable software solutions. I value well-structured code, the application of design patterns, and collaboration to build high-quality products.",
+  "desenvolvoLogicaServidor": "I develop server logic, security, and the infrastructure that supports applications. I am proficient in building robust and scalable REST APIs using Java.",
+  "crioInterfaces": "I create fluid and responsive user interfaces with a focus on User Experience (UX). I have solid experience with React.js, transforming complex designs into reusable and performant components.",
+  "comunicacaoColaboracaoAgil": "Communication and Agile Collaboration",
+  "comunicacaoClaraBase": "I believe that clear communication is the foundation of a project's success. I work collaboratively in multidisciplinary teams (developers, designers, PMs), using agile methodologies to align technical objectives with business goals and deliver continuous value."
+}
