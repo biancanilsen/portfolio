@@ -1,7 +1,6 @@
-import React from "react";
-import ProfilePic from "../../assets/githubb.webp";
 import CheckVanImage from "../../assets/checkVan.webp";
 import EncurtadorURLImage from "../../assets/encurtadorURL.png";
+import ProfilePic from "../../assets/githubb.webp";
 
 export function useProjetos() {
   const projetos = [

@@ -818,6 +818,10 @@
     margin-inline-start: calc(var(--spacing) * 3);
   }
 
+  .ms-21 {
+    margin-inline-start: calc(var(--spacing) * 21);
+  }
+
   .me-2 {
     margin-inline-end: calc(var(--spacing) * 2);
   }

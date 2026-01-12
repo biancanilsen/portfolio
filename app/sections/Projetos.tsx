@@ -1,9 +1,7 @@
-import React from "react";
-import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
-import Image from "next/image";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Link } from "@heroui/link";
+import Image from "next/image";
 import { useProjetos } from "../hooks/useProjetos";
-import { Tooltip } from "@heroui/tooltip";
 
 export function Projetos() {
   const { projetos } = useProjetos();
