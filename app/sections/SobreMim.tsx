@@ -12,7 +12,7 @@ export function SobreMim() {
         <p className="text-lg text-neutral-400 mb-12">{t("sejaBemVindo")}</p>
 
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div className="text-9xl font-bold text-[#998684]">3+</div>
+          <div className="text-9xl font-bold text-[#998684]">4+</div>
 
           <div className="text-lg text-neutral-400 max-w-3xl leading-relaxed">
             <p>{t("minhaTragetoria")}</p>
