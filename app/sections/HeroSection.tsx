@@ -1,9 +1,11 @@
 "use client";
 
-import { title } from "@/components/primitives";
-import ProfilePic from "../../assets/profileBia.webp";
 import { useTranslation } from "react-i18next";
-import Image from 'next/image';
+import Image from "next/image";
+
+import ProfilePic from "../../assets/profileBia.webp";
+
+import { title } from "@/components/primitives";
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -25,21 +27,21 @@ export function HeroSection() {
               {t("saudacaoInicial")}
             </p>
 
-            <a href="#sobre-mim" className="btn btn-primary">
+            <a className="btn btn-primary" href="#sobre-mim">
               <span className="flex items-center text-neutral-400">
                 {t("aboutMe")} <span className="ml-2">→</span>
               </span>
             </a>
           </div>
-            <div className="relative rounded-full overflow-hidden w-80 h-80 md:w-96 md:h-96 mx-auto order-1 lg:order-2">
-              <Image
-                src={ProfilePic}
-                alt="Bianca Nilsen"
-                fill
-                style={{ objectFit: 'cover' }}
-                priority
-              />
-            </div>
+          <div className="relative rounded-full overflow-hidden w-80 h-80 md:w-96 md:h-96 mx-auto order-1 lg:order-2">
+            <Image
+              fill
+              priority
+              alt="Bianca Nilsen"
+              src={ProfilePic}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
         </div>
       </div>
     </section>

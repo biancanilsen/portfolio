@@ -6,7 +6,7 @@ export function SobreMim() {
   const { t } = useTranslation();
 
   return (
-    <section id="sobre-mim" className="w-full py-20 lg:py-28">
+    <section className="w-full py-20 lg:py-28" id="sobre-mim">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-4">Sobre mim</h2>
         <p className="text-lg text-neutral-400 mb-12">{t("sejaBemVindo")}</p>

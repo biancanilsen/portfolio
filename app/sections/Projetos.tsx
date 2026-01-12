@@ -1,6 +1,7 @@
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Link } from "@heroui/link";
 import Image from "next/image";
+
 import { useProjetos } from "../hooks/useProjetos";
 
 export function Projetos() {
@@ -23,27 +24,33 @@ export function Projetos() {
               <CardHeader className="flex justify-center">
                 <div className="relative w-full h-48 overflow-hidden rounded-md">
                   <Image
-                    src={projeto.imageSrc}
                     alt={projeto.title}
                     layout="fill"
                     objectFit="cover"
+                    src={projeto.imageSrc}
                   />
                 </div>
               </CardHeader>
               <CardBody className="p-6 flex-grow">
-                <h3 className="font-bold text-lg mb-2 overflow-hidden whitespace-nowrap text-ellipsis" title={projeto.title}>
+                <h3
+                  className="font-bold text-lg mb-2 overflow-hidden whitespace-nowrap text-ellipsis"
+                  title={projeto.title}
+                >
                   {projeto.title}
                 </h3>
-                <p className="text-sm text-neutral-400 group-hover:text-neutral-800 transition-colors duration-300 text-ellipsis" title={projeto.description}>
+                <p
+                  className="text-sm text-neutral-400 group-hover:text-neutral-800 transition-colors duration-300 text-ellipsis"
+                  title={projeto.description}
+                >
                   {projeto.description}
                 </p>
               </CardBody>
               <CardFooter className="justify-center py-4">
                 <Link
-                  href={projeto.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-sm font-semibold text-[#998684] group-hover:text-black transition-colors duration-300 cursor-pointer"
+                  href={projeto.link}
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Ver detalhes
                 </Link>

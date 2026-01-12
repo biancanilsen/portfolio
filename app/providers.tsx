@@ -1,15 +1,13 @@
 "use client";
-
 import type { ThemeProviderProps } from "next-themes";
+
 import * as React from "react";
 import { HeroUIProvider } from "@heroui/system";
 import { useRouter } from "next/navigation";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-
-// PASSO 1: Adicione estas duas importações
 import { I18nextProvider } from "react-i18next";
-import i18n from "../i18n";
 
+import i18n from "../i18n";
 export interface ProvidersProps {
   children: React.ReactNode;
   themeProps?: ThemeProviderProps;

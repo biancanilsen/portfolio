@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Card, CardHeader, CardBody } from "@heroui/card";
+
 import { useHabilidades } from "../hooks/useHabilidades";
 
 export function Habilidades() {
