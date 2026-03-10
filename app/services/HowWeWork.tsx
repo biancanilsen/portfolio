@@ -20,7 +20,7 @@ const steps = [
   {
     icon: Key,
     title: "Suporte & Handover",
-    description: "Treinamento e entrega de todo o código e documentação.",
+    description: "Treinamento e entrega de todo o código/sistema e documentação.",
   },
 ];
 
@@ -45,8 +45,8 @@ export default function HowWeWork() {
             <div className="absolute -top-2 -right-2 flex items-center justify-center w-8 h-8 rounded-full text-white text-sm font-bold bg-[#998684]">
               {index + 1}
             </div>
-            <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-            <p className="text-default-600">{step.description}</p>
+            <h3 className="text-base font-semibold mb-3">{step.title}</h3>
+            <p className="text-sm font-light text-default-600">{step.description}</p>
           </div>
         ))}
       </div>

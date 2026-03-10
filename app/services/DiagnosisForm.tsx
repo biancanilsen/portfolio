@@ -100,7 +100,7 @@ export default function DiagnosisForm() {
       <h2 className="text-3xl font-bold mb-2 text-center">
         Diagnóstico Estratégico
       </h2>
-      <p className="text-default-500 text-center mb-8">
+      <p className="text-default-500 text-center mb-8 font-light">
         Preencha os campos abaixo para que eu possa entender sua necessidade e
         elaborar uma proposta personalizada.
       </p>
@@ -167,7 +167,7 @@ export default function DiagnosisForm() {
             className="block text-sm font-medium text-default-700 mb-2"
             htmlFor="businessProblem"
           >
-            Problema de Negócio *
+            Problema de Negócio <span className="text-danger">*</span>
           </label>
           <Controller
             control={control}
@@ -193,7 +193,7 @@ export default function DiagnosisForm() {
             className="block text-sm font-medium text-default-700 mb-2"
             htmlFor="mustHaveFeatures"
           >
-            Funcionalidades {"Must-Have"} *
+            Funcionalidades {"Must-Have"} <span className="text-danger">*</span>
           </label>
           <Controller
             control={control}
@@ -284,7 +284,7 @@ export default function DiagnosisForm() {
 
         {isSuccess && (
           <p className="text-success text-center text-sm">
-            Obrigado! Entrarei em contato em até 48h com uma proposta.
+            Obrigado! Entrarei em contato em até 48h para marcarmos uma reunião de alinhamento inicial.
           </p>
         )}
         {submitError && (

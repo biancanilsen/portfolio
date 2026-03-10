@@ -8,10 +8,10 @@ export default function HeroSection() {
   
   return (
     <div className="text-center max-w-4xl mx-auto">
-      <h1 className={title({ size: "lg" })}>
+      <h1 className={`${title()} text-[#6371A2]`}>
         {t("services.title")}
       </h1>
-      <p className={subtitle({ class: "mt-6" })}>
+      <p className={subtitle({ class: "mt-6 font font-light text-neutral-400" })}>
         {t("services.subtitle")}
       </p>
     </div>
