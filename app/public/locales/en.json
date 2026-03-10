@@ -11,5 +11,13 @@
   "desenvolvoLogicaServidor": "I develop server logic, security, and the infrastructure that supports applications. I am proficient in building robust and scalable REST APIs using Java.",
   "crioInterfaces": "I create fluid and responsive user interfaces with a focus on User Experience (UX). I have solid experience with React.js, transforming complex designs into reusable and performant components.",
   "comunicacaoColaboracaoAgil": "Communication and Agile Collaboration",
-  "comunicacaoClaraBase": "I believe that clear communication is the foundation of a project's success. I work collaboratively in multidisciplinary teams (developers, designers, PMs), using agile methodologies to align technical objectives with business goals and deliver continuous value."
+  "comunicacaoClaraBase": "I believe that clear communication is the foundation of a project's success. I work collaboratively in multidisciplinary teams (developers, designers, PMs), using agile methodologies to align technical objectives with business goals and deliver continuous value.",
+  "nav": {
+    "home": "Home",
+    "services": "Services"
+  },
+  "services": {
+    "title": "End-to-End Solution Development",
+    "subtitle": "As a Full-Stack developer specializing in Spring Boot, React, and Flutter, I excel in crafting robust MVPs and scalable SaaS solutions that address real business challenges. I transform ideas into functional products with quality and agility."
+  }
 }

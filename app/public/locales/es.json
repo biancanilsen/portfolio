@@ -11,5 +11,13 @@
   "desenvolvoLogicaServidor": "Desarrollo la lógica del servidor, la seguridad y la infraestructura que sustentan las aplicaciones. Soy competente en la construcción de APIs REST robustas y escalables utilizando Java.",
   "crioInterfaces": "Creo interfaces de usuario fluidas y responsivas con enfoque en la experiencia de usuario (UX). Tengo sólida experiencia con React.js, transformando diseños complejos en componentes reutilizables y de alto rendimiento.",
   "comunicacaoColaboracaoAgil": "Comunicación y Colaboración Ágil",
-  "comunicacaoClaraBase": "Creo que la comunicación clara es la base para el éxito de un proyecto. Trabajo de forma colaborativa en equipos multidisciplinarios (desarrolladores, diseñadores, PMs), utilizando metodologías ágiles para alinear objetivos técnicos con las metas de negocio y entregar valor continuo."
+  "comunicacaoClaraBase": "Creo que la comunicación clara es la base para el éxito de un proyecto. Trabajo de forma colaborativa en equipos multidisciplinarios (desarrolladores, diseñadores, PMs), utilizando metodologías ágiles para alinear objetivos técnicos con las metas de negocio y entregar valor continuo.",
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios"
+  },
+  "services": {
+    "title": "Desarrollo de Soluciones de Punta a Punta",
+    "subtitle": "Como desarrolladora Full-Stack con enfoque en Spring Boot, React y Flutter, me especializo en la creación de MVPs robustos y SaaS escalables que resuelven problemas reales de negocio. Transformo ideas en productos funcionales con calidad y agilidad."
+  }
 }

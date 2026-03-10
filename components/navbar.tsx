@@ -1,5 +1,6 @@
 "use client";
 import { Link } from "@heroui/link";
+import { link as linkStyles } from "@heroui/theme";
 import {
   Navbar as HeroUINavbar,
   NavbarBrand,
@@ -9,6 +10,7 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@heroui/navbar";
+import clsx from "clsx";
 import { Select, SelectItem } from "@heroui/select";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -22,7 +24,7 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -53,6 +55,22 @@ export const Navbar = () => {
             </div>
           </NextLink>
         </NavbarBrand>
+        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+          {siteConfig.navItems.map((item) => (
+            <NavbarItem key={item.href}>
+              <NextLink
+                className={clsx(
+                  linkStyles({ color: "foreground" }),
+                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                )}
+                color="foreground"
+                href={item.href}
+              >
+                {t(item.label)}
+              </NextLink>
+            </NavbarItem>
+          ))}
+        </ul>
       </NavbarContent>
 
       <NavbarContent
