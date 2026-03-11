@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 import { Card, CardHeader, CardBody } from "@heroui/card";
+import { useTranslation } from "react-i18next";
 
 import { useHabilidades } from "../hooks/useHabilidades";
-import { useTranslation } from "react-i18next";
 
 export function Habilidades() {
   const { habilidades } = useHabilidades();
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section className="w-full py-20 lg:py-28">

@@ -26,6 +26,7 @@ import { siteConfig } from "@/config/site";
 export const Navbar = () => {
   const { i18n, t } = useTranslation();
   const [mounted, setMounted] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -40,7 +41,12 @@ export const Navbar = () => {
   };
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar
+      isMenuOpen={isMenuOpen}
+      maxWidth="xl"
+      position="sticky"
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -155,11 +161,12 @@ export const Navbar = () => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item.href}-${index}`}>
               <NextLink
-                href={item.href} // Aqui usamos o link real do site.ts
                 className={clsx(
                   linkStyles({ color: "foreground" }),
                   "text-lg w-full",
                 )}
+                href={item.href} // Aqui usamos o link real do site.ts
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </NextLink>

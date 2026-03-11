@@ -224,6 +224,30 @@ export default function DiagnosisForm() {
           <Controller
             control={control}
             name="whatsapp"
+            render={({ field: { onChange, onBlur, value, ref } }) => (
+              <Input
+                ref={ref}
+                isRequired
+                errorMessage={errors.whatsapp?.message}
+                isInvalid={!!errors.whatsapp}
+                label={t("diagnosisForm.fields.whatsapp.label")}
+                placeholder="(99) 99999-9999"
+                value={value}
+                variant="bordered"
+                onBlur={onBlur}
+                onChange={(e) => {
+                  // Lógica simples de máscara manual para não quebrar o DOM
+                  const val = e.target.value.replace(/\D/g, "").slice(0, 11);
+                  let masked = val;
+
+                  if (val.length > 2)
+                    masked = `(${val.slice(0, 2)}) ${val.slice(2)}`;
+                  if (val.length > 7)
+                    masked = `(${val.slice(0, 2)}) ${val.slice(2, 7)}-${val.slice(7)}`;
+                  onChange(masked);
+                }}
+              />
+            )}
             rules={{
               required: t("diagnosisForm.fields.whatsapp.error"),
               pattern: {
@@ -231,29 +255,6 @@ export default function DiagnosisForm() {
                 message: t("diagnosisForm.fields.whatsapp.error"), // Ou uma chave de "formato inválido"
               },
             }}
-            render={({ field: { onChange, onBlur, value, ref } }) => (
-              <Input
-                ref={ref}
-                value={value}
-                onBlur={onBlur}
-                onChange={(e) => {
-                  // Lógica simples de máscara manual para não quebrar o DOM
-                  const val = e.target.value.replace(/\D/g, "").slice(0, 11);
-                  let masked = val;
-                  if (val.length > 2)
-                    masked = `(${val.slice(0, 2)}) ${val.slice(2)}`;
-                  if (val.length > 7)
-                    masked = `(${val.slice(0, 2)}) ${val.slice(2, 7)}-${val.slice(7)}`;
-                  onChange(masked);
-                }}
-                isRequired
-                label={t("diagnosisForm.fields.whatsapp.label")}
-                placeholder="(99) 99999-9999"
-                variant="bordered"
-                isInvalid={!!errors.whatsapp}
-                errorMessage={errors.whatsapp?.message}
-              />
-            )}
           />
         </div>
 
@@ -376,9 +377,6 @@ export default function DiagnosisForm() {
           <Controller
             control={control}
             name="mustHaveFeatures"
-            rules={{
-              required: t("diagnosisForm.fields.mustHaveFeatures.error"),
-            }}
             render={({ field: { ref, ...field } }) => (
               <textarea
                 {...field}
@@ -395,6 +393,9 @@ export default function DiagnosisForm() {
                 rows={4}
               />
             )}
+            rules={{
+              required: t("diagnosisForm.fields.mustHaveFeatures.error"),
+            }}
           />
           {errors.mustHaveFeatures && (
             <p className="text-danger text-xs mt-1 animate-appearance-in">
