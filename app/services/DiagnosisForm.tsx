@@ -325,7 +325,9 @@ export default function DiagnosisForm() {
 
         <div>
           <label
-            className="block text-sm font-medium text-default-700 mb-2"
+            className={`block text-sm font-medium mb-2 ${
+              errors.businessProblem ? "text-danger" : "text-default-700"
+            }`}
             htmlFor="businessProblem"
           >
             {t("diagnosisForm.fields.businessProblem.label")}{" "}
@@ -334,13 +336,16 @@ export default function DiagnosisForm() {
           <Controller
             control={control}
             name="businessProblem"
+            rules={{
+              required: t("diagnosisForm.fields.businessProblem.error"),
+            }} // Adicionado a mensagem aqui
             render={({ field }) => (
               <textarea
                 {...field}
-                className={`w-full p-3 border rounded-xl bg-transparent focus:border-primary focus:ring-1 focus:ring-primary outline-none transition ${
+                className={`w-full p-3 border rounded-xl bg-transparent focus:ring-1 outline-none transition ${
                   errors.businessProblem
-                    ? "border-danger"
-                    : "border-default-300"
+                    ? "border-danger focus:border-danger focus:ring-danger"
+                    : "border-default-300 focus:border-primary focus:ring-primary"
                 }`}
                 id="businessProblem"
                 placeholder={t(
@@ -349,18 +354,20 @@ export default function DiagnosisForm() {
                 rows={4}
               />
             )}
-            rules={{ required: true }}
           />
           {errors.businessProblem && (
-            <p className="text-danger text-sm mt-1">
-              {t("diagnosisForm.fields.businessProblem.error")}
+            <p className="text-danger text-xs mt-1">
+              {errors.businessProblem.message ||
+                t("diagnosisForm.fields.businessProblem.error")}
             </p>
           )}
         </div>
 
         <div>
           <label
-            className="block text-sm font-medium text-default-700 mb-2"
+            className={`block text-sm font-medium mb-2 transition-colors ${
+              errors.mustHaveFeatures ? "text-danger" : "text-default-700"
+            }`}
             htmlFor="mustHaveFeatures"
           >
             {t("diagnosisForm.fields.mustHaveFeatures.label")}{" "}
@@ -369,13 +376,17 @@ export default function DiagnosisForm() {
           <Controller
             control={control}
             name="mustHaveFeatures"
-            render={({ field }) => (
+            rules={{
+              required: t("diagnosisForm.fields.mustHaveFeatures.error"),
+            }}
+            render={({ field: { ref, ...field } }) => (
               <textarea
                 {...field}
-                className={`w-full p-3 border rounded-xl bg-transparent focus:border-primary focus:ring-1 focus:ring-primary outline-none transition ${
+                ref={ref}
+                className={`w-full p-3 border rounded-xl bg-transparent outline-none transition-all ${
                   errors.mustHaveFeatures
-                    ? "border-danger"
-                    : "border-default-300"
+                    ? "border-danger focus:border-danger focus:ring-1 focus:ring-danger"
+                    : "border-default-300 focus:border-primary focus:ring-1 focus:ring-primary"
                 }`}
                 id="mustHaveFeatures"
                 placeholder={t(
@@ -384,11 +395,11 @@ export default function DiagnosisForm() {
                 rows={4}
               />
             )}
-            rules={{ required: true }}
           />
           {errors.mustHaveFeatures && (
-            <p className="text-danger text-sm mt-1">
-              {t("diagnosisForm.fields.mustHaveFeatures.error")}
+            <p className="text-danger text-xs mt-1 animate-appearance-in">
+              {errors.mustHaveFeatures.message ||
+                t("diagnosisForm.fields.mustHaveFeatures.error")}
             </p>
           )}
         </div>
