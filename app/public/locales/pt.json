@@ -19,7 +19,7 @@
   },
   "services": {
     "title": "Desenvolvimento de soluções de ponta a ponta",
-    "subtitle": "Como desenvolvedora Full-Stack com foco em Spring Boot, React e Flutter, foco na criação de MVPs robustos e SaaS escaláveis que resolvem problemas reais de negócio. Transformo ideias em produtos funcionais com qualidade e agilidade."
+    "subtitle": "Como desenvolvedora Full-Stack com foco em Spring Boot, React e Flutter, atuo na criação de MVPs robustos e SaaS escaláveis que resolvem problemas reais de negócio. Transformo ideias em produtos funcionais com qualidade e agilidade."
   },
   "diagnosisForm": {
     "title": "Diagnóstico estratégico",
@@ -150,5 +150,9 @@
   },
   "projects": {
     "title": "Explore alguns projetos que já desenvolvi"
-  }
+  },
+  "checkVan": "Check Van",
+  "checkVanDescription": "Aplicativo completo que conecta pais e motoristas para simplificar e trazer mais segurança à rotina do transporte escolar. Com ele, é possível gerar rotas otimizadas, gerenciar alunos, organizar viagens e muito mais, tudo na palma da sua mão.",
+  "encurtadorMicrosservice": "Encurtador de URL com microsserviços",
+  "encurtadorDescription": "Sistema de encurtamento de URLs construído com uma arquitetura de microsserviços em Java. O projeto explora a comunicação entre serviços independentes (API Gateway, Link Service, Redirect Service) orquestrados com Docker Compose"
 }

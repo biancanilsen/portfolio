@@ -38,13 +38,13 @@ export function Projetos() {
                   className="font-bold text-lg mb-2 overflow-hidden whitespace-nowrap text-ellipsis"
                   title={projeto.title}
                 >
-                  {projeto.title}
+                  {t(projeto.title)}
                 </h3>
                 <p
                   className="text-sm text-neutral-400 group-hover:text-neutral-800 transition-colors duration-300 text-ellipsis"
                   title={projeto.description}
                 >
-                  {projeto.description}
+                  {t(projeto.description)}
                 </p>
               </CardBody>
               <CardFooter className="justify-center py-4">

@@ -5,15 +5,14 @@ import ProfilePic from "../../assets/githubb.webp";
 export function useProjetos() {
   const projetos = [
     {
-      title: "CHECK VAN",
-      description:
-        "Aplicativo completo que conecta pais e motoristas para simplificar e trazer mais segurança à rotina do transporte escolar. Com ele, é possível gerar rotas otimizadas, gerenciar alunos, organizar viagens e muito mais, tudo na palma da sua mão.",
+      title: "checkVan",
+      description: "checkVanDescription",
       imageSrc: CheckVanImage,
       link: "https://github.com/biancanilsen/CheckVanFrontend",
     },
     {
-      title: "Encurtador de URL com microsserviços",
-      description: "Sistema de encurtamento de URLs construído com uma arquitetura de microsserviços em Java. O projeto explora a comunicação entre serviços independentes (API Gateway, Link Service, Redirect Service) orquestrados com Docker Compose",
+      title: "encurtadorMicrosservice",
+      description: "encurtadorDescription",
       imageSrc: EncurtadorURLImage,
       link: "https://github.com/biancanilsen/encurtador-url",
     },

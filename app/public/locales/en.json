@@ -150,5 +150,9 @@
   },
   "projects": {
     "title": "Explore some projects I've already developed"
-  }
+  },
+  "checkVan": "Check Van",
+  "checkVanDescription": "Complete application that connects parents and drivers to simplify and bring more safety to the school transport routine. With it, you can generate optimized routes, manage students, organize trips and much more, all in the palm of your hand.",
+  "encurtadorMicrosservice": "URL shortener with microservices",
+  "encurtadorDescription": "URL shortening system built with a microservices architecture in Java. The project explores communication between independent services (API Gateway, Link Service, Redirect Service) orchestrated with Docker Compose"
 }
