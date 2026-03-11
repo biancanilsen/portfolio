@@ -3,6 +3,7 @@
   "saudacaoInicial": "I am a software developer driven by creating innovative and efficient solutions. My goal is to turn ideas into reality through code, building applications that positively impact people's lives. Browse my portfolio to explore my projects and skills.",
   "aboutMe": "About Me",
   "sejaBemVindo": "Welcome to my portfolio. Discover my journey:",
+  "skills": "Main skills",
   "minhaTragetoria": "years of experience in software development. The ability to build something functional and beautiful from scratch is what drives me as a software developer. My professional journey has been focused on developing robust and scalable web applications, always committed to delivering the best experience for the end user. I believe that collaboration and communication are just as important as well-written code. Therefore, in my projects, I always seek to deeply understand the problem to be solved, working in an agile manner and in sync with the team. I am an enthusiast of development best practices, such as Clean Code and automated testing, as I understand that software quality is fundamental to its long-term success.",
   "desenvolvimentoFrontendModerno": "Modern Front-End Development",
   "arquiteturaBackend": "Back-End Architecture and APIs",
@@ -146,5 +147,8 @@
       }
     },
     "footer": "I work with agile methodologies (Scrum/Kanban) and keep you updated at each project phase."
+  },
+  "projects": {
+    "title": "Explore some projects I've already developed"
   }
 }

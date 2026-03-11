@@ -2,6 +2,7 @@
   "greeting": "Olá! Meu nome é",
   "saudacaoInicial": "Sou uma desenvolvedora de software movida por criar soluções inovadoras e eficientes. Meu objetivo é transformar ideias em realidade através do código, construindo aplicações que impactam positivamente a vida das pessoas. Navegue pelo meu portfólio para conhecer meus projetos e habilidades.",
   "aboutMe": "Sobre mim",
+  "skills": "Principais habilidades",
   "sejaBemVindo": "Seja muito bem-vindo(a) ao meu portfólio. Conheça a minha trajetória:",
   "minhaTragetoria": "anos de experiência com desenvolvimento de software. A capacidade de construir algo funcional e belo a partir do zero é o que me move como desenvolvedora de software. Minha jornada profissional tem sido focada no desenvolvimento de aplicações web robustas e escaláveis, sempre com o compromisso de entregar a melhor experiência para o usuário final.Acredito que a colaboração e a comunicação são tão importantes quanto um código bem escrito. Por isso, em meus projetos, busco sempre entender a fundo o problema a ser resolvido, trabalhando de forma ágil e em sintonia com a equipe. Sou uma entusiasta de boas práticas de desenvolvimento, como código limpo e testes automatizados, pois entendo que a qualidade do software é fundamental para o seu sucesso a longo prazo.",
   "desenvolvimentoFrontendModerno": "Desenvolvimento Front-End Moderno",
@@ -146,5 +147,8 @@
       }
     },
     "footer": "Trabalho com metodologias ágeis (Scrum/Kanban) e mantenho você atualizado em cada fase do projeto."
+  },
+  "projects": {
+    "title": "Explore alguns projetos que já desenvolvi"
   }
 }

@@ -3,15 +3,17 @@ import { Link } from "@heroui/link";
 import Image from "next/image";
 
 import { useProjetos } from "../hooks/useProjetos";
+import { useTranslation } from "react-i18next";
 
 export function Projetos() {
   const { projetos } = useProjetos();
+  const {t} = useTranslation();
 
   return (
     <section className="w-full py-20 lg:py-28">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12">
-          Explore alguns projetos que já desenvolvi
+          {t("projects.title")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projetos.map((projeto, index) => (

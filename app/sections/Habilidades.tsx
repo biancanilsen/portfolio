@@ -3,14 +3,16 @@ import React from "react";
 import { Card, CardHeader, CardBody } from "@heroui/card";
 
 import { useHabilidades } from "../hooks/useHabilidades";
+import { useTranslation } from "react-i18next";
 
 export function Habilidades() {
   const { habilidades } = useHabilidades();
+  const {t} = useTranslation();
 
   return (
     <section className="w-full py-20 lg:py-28">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12">Principais habilidades</h2>
+        <h2 className="text-3xl font-bold mb-12">{t("skills")}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {habilidades.map((habilidade, index) => (
             <Card
