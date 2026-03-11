@@ -31,11 +31,11 @@ export const siteConfig = {
   ],
   navMenuItems: [
     {
-      label: "Home",
+      label: "nav.home",
       href: "/",
     },
     {
-      label: "Services",
+      label: "nav.services",
       href: "/services",
     },
     // {

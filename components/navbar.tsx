@@ -168,7 +168,7 @@ export const Navbar = () => {
                 href={item.href} // Aqui usamos o link real do site.ts
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item.label}
+                {t(item.label)}
               </NextLink>
             </NavbarMenuItem>
           ))}
