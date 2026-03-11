@@ -1,36 +1,41 @@
-import { Coffee, FileText, Code, Key } from "lucide-react";
+"use client";
 
-const steps = [
-  {
-    icon: Coffee,
-    title: "Diagnóstico",
-    description:
-      "Reunião de 30 min para alinhamento de expectativas (sem custo).",
-  },
-  {
-    icon: FileText,
-    title: "Proposta Técnica",
-    description: "Envio de escopo detalhado e cronograma em até 72h.",
-  },
-  {
-    icon: Code,
-    title: "Desenvolvimento Ágil",
-    description: "Entregas incrementais com feedback constante.",
-  },
-  {
-    icon: Key,
-    title: "Suporte & Handover",
-    description: "Treinamento e entrega de todo o código/sistema e documentação.",
-  },
-];
+import { Coffee, FileText, Code, Key } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function HowWeWork() {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      icon: Coffee,
+      title: t("howWeWork.steps.step1.title"),
+      description: t("howWeWork.steps.step1.description"),
+    },
+    {
+      icon: FileText,
+      title: t("howWeWork.steps.step2.title"),
+      description: t("howWeWork.steps.step2.description"),
+    },
+    {
+      icon: Code,
+      title: t("howWeWork.steps.step3.title"),
+      description: t("howWeWork.steps.step3.description"),
+    },
+    {
+      icon: Key,
+      title: t("howWeWork.steps.step4.title"),
+      description: t("howWeWork.steps.step4.description"),
+    },
+  ];
+
   return (
     <div className="max-w-5xl mx-auto py-12 px-4">
-      <h2 className="text-3xl font-bold text-center mb-4">Como Trabalho</h2>
+      <h2 className="text-3xl font-bold text-center mb-4">
+        {t("howWeWork.title")}
+      </h2>
       <p className="text-default-500 text-center mb-12 max-w-2xl mx-auto">
-        Executo um processo transparente e colaborativo, garantindo que cada etapa
-        seja clara e alinhada com seus objetivos.
+        {t("howWeWork.description")}
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -46,16 +51,15 @@ export default function HowWeWork() {
               {index + 1}
             </div>
             <h3 className="text-base font-semibold mb-3">{step.title}</h3>
-            <p className="text-sm font-light text-default-600">{step.description}</p>
+            <p className="text-sm font-light text-default-600">
+              {step.description}
+            </p>
           </div>
         ))}
       </div>
 
       <div className="mt-12 text-center text-default-400 text-sm">
-        <p>
-          Trabalho com metodologias ágeis (Scrum/Kanban) e mantenho você
-          atualizado em cada fase do projeto.
-        </p>
+        <p>{t("howWeWork.footer")}</p>
       </div>
     </div>
   );

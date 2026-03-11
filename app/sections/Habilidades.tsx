@@ -17,7 +17,7 @@ export function Habilidades() {
               key={index}
               className="group p-6 text-left bg-neutral-800 text-white cursor-pointer
                          hover:bg-[#998684] hover:text-black 
-                         transition-colors duration-300" 
+                         transition-colors duration-300"
             >
               <CardHeader className="flex flex-col items-start gap-4">
                 <div className="text-[#6371A2] group-hover:text-black transition-colors duration-300">

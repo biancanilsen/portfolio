@@ -19,5 +19,132 @@
   "services": {
     "title": "End-to-End Solution Development",
     "subtitle": "As a Full-Stack developer specializing in Spring Boot, React, and Flutter, I excel in crafting robust MVPs and scalable SaaS solutions that address real business challenges. I transform ideas into functional products with quality and agility."
+  },
+  "diagnosisForm": {
+    "title": "Strategic Diagnosis",
+    "description": "Fill out the fields below so I can understand your needs and prepare a personalized proposal.",
+    "fields": {
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "Your full name",
+        "error": "Name is required"
+      },
+      "linkedinUrl": {
+        "label": "LinkedIn Link",
+        "description": "Optional, but helps to know your professional profile",
+        "placeholder": "https://linkedin.com/in/your-profile"
+      },
+      "solutionType": {
+        "label": "Solution Type",
+        "placeholder": "Select an option",
+        "error": "Select a solution type"
+      },
+      "businessProblem": {
+        "label": "Business Problem",
+        "placeholder": "What pain or process do you want to solve/automate?",
+        "error": "Describe the problem"
+      },
+      "mustHaveFeatures": {
+        "label": "Must-Have Features",
+        "placeholder": "What must the system absolutely have?",
+        "error": "List the essential features"
+      },
+      "budget": {
+        "label": "Budget",
+        "placeholder": "Select a range",
+        "error": "Select a budget range"
+      },
+      "timeline": {
+        "label": "Estimated Timeline",
+        "placeholder": "Select a timeline",
+        "error": "Select a timeline"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "your.email@example.com",
+        "error": "Valid email is required"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "placeholder": "(99) 99999-9999",
+        "error": "WhatsApp number is required"
+      },
+      "company": {
+        "label": "Company/Project Name",
+        "placeholder": "Optional"
+      },
+      "projectStage": {
+        "label": "Project Stage",
+        "placeholder": "Select stage",
+        "error": "Select a project stage",
+        "options": {
+          "idea": "Idea",
+          "prototype": "Prototype",
+          "production": "Product in Production"
+        }
+      },
+      "howMet": {
+        "label": "How did you hear about me?",
+        "placeholder": "Select an option",
+        "error": "Select how you heard about me",
+        "options": {
+          "linkedin": "LinkedIn",
+          "github": "GitHub",
+          "referral": "Referral",
+          "other": "Other"
+        }
+      }
+    },
+    "options": {
+      "solutionTypes": {
+        "web-app": "Web App - Site",
+        "mobile-app": "Mobile App - Aplicativo",
+        "mvp-saas": "MVP de SaaS",
+        "automation-bots": "Automação/Bots",
+        "technical-consulting": "Consultoria Técnica"
+      },
+      "budgetOptions": {
+        "0k-5k": "~ - 5k",
+        "5k-10k": "R$ 5k - 10k",
+        "10k-30k": "R$ 10k - 30k",
+        "30k-plus": "Acima de R$ 30k"
+      },
+      "timelineOptions": {
+        "less-than-1-month": "< 1 mês",
+        "1-3-months": "1 a 3 meses",
+        "3-plus-months": "3+ meses"
+      }
+    },
+    "button": {
+      "submit": "Send Diagnosis",
+      "submitting": "Sending...",
+      "success": "Sent successfully!"
+    },
+    "successMessage": "Thank you! I'll get back to you within 48h to schedule an initial alignment meeting.",
+    "errorMessage": "There was a problem submitting the form. Please try again or contact me directly.",
+    "footerNote": "This form is the first step towards a successful project. All information will be treated confidentially."
+  },
+  "howWeWork": {
+    "title": "How I Work",
+    "description": "I execute a transparent and collaborative process, ensuring each step is clear and aligned with your goals.",
+    "steps": {
+      "step1": {
+        "title": "Diagnosis",
+        "description": "30‑min meeting to align expectations (no cost)."
+      },
+      "step2": {
+        "title": "Technical Proposal",
+        "description": "Detailed scope and timeline delivery within 72h."
+      },
+      "step3": {
+        "title": "Development",
+        "description": "Incremental deliveries with constant feedback."
+      },
+      "step4": {
+        "title": "Handover",
+        "description": "Training and delivery of all code/system and documentation."
+      }
+    },
+    "footer": "I work with agile methodologies (Scrum/Kanban) and keep you updated at each project phase."
   }
 }

@@ -19,5 +19,132 @@
   "services": {
     "title": "Desarrollo de Soluciones de Punta a Punta",
     "subtitle": "Como desarrolladora Full-Stack con enfoque en Spring Boot, React y Flutter, me especializo en la creación de MVPs robustos y SaaS escalables que resuelven problemas reales de negocio. Transformo ideas en productos funcionales con calidad y agilidad."
+  },
+  "diagnosisForm": {
+    "title": "Diagnóstico Estratégico",
+    "description": "Complete los campos a continuación para que pueda entender sus necesidades y preparar una propuesta personalizada.",
+    "fields": {
+      "fullName": {
+        "label": "Nombre Completo",
+        "placeholder": "Su nombre completo",
+        "error": "El nombre es obligatorio"
+      },
+      "linkedinUrl": {
+        "label": "Enlace de LinkedIn",
+        "description": "Opcional, pero ayuda a conocer su perfil profesional",
+        "placeholder": "https://linkedin.com/in/su-perfil"
+      },
+      "solutionType": {
+        "label": "Tipo de Solución",
+        "placeholder": "Seleccione una opción",
+        "error": "Seleccione un tipo de solución"
+      },
+      "businessProblem": {
+        "label": "Problema de Negocio",
+        "placeholder": "¿Qué dolor o proceso desea resolver/automatizar?",
+        "error": "Describa el problema"
+      },
+      "mustHaveFeatures": {
+        "label": "Funcionalidades Imprescindibles",
+        "placeholder": "¿Qué debe tener el sistema absolutamente?",
+        "error": "Enumere las funcionalidades esenciales"
+      },
+      "budget": {
+        "label": "Presupuesto",
+        "placeholder": "Seleccione un rango",
+        "error": "Seleccione un rango de presupuesto"
+      },
+      "timeline": {
+        "label": "Plazo Estimado",
+        "placeholder": "Seleccione un plazo",
+        "error": "Seleccione un plazo"
+      },
+      "email": {
+        "label": "Correo Electrónico",
+        "placeholder": "su.correo@ejemplo.com",
+        "error": "Se requiere un correo electrónico válido"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "placeholder": "(99) 99999-9999",
+        "error": "El número de WhatsApp es obligatorio"
+      },
+      "company": {
+        "label": "Nombre de la Empresa/Proyecto",
+        "placeholder": "Opcional"
+      },
+      "projectStage": {
+        "label": "Etapa del Proyecto",
+        "placeholder": "Seleccione la etapa",
+        "error": "Seleccione una etapa del proyecto",
+        "options": {
+          "idea": "Idea",
+          "prototype": "Prototipo",
+          "production": "Producto en Producción"
+        }
+      },
+      "howMet": {
+        "label": "¿Cómo me conoció?",
+        "placeholder": "Seleccione una opción",
+        "error": "Seleccione cómo me conoció",
+        "options": {
+          "linkedin": "LinkedIn",
+          "github": "GitHub",
+          "referral": "Recomendación",
+          "other": "Otro"
+        }
+      }
+    },
+    "options": {
+      "solutionTypes": {
+        "web-app": "Aplicación Web - Sitio",
+        "mobile-app": "Aplicación Móvil - App",
+        "mvp-saas": "MVP de SaaS",
+        "automation-bots": "Automatización/Bots",
+        "technical-consulting": "Consultoría Técnica"
+      },
+      "budgetOptions": {
+        "0k-5k": "~ - 5k",
+        "5k-10k": "R$ 5k - 10k",
+        "10k-30k": "R$ 10k - 30k",
+        "30k-plus": "Más de R$ 30k"
+      },
+      "timelineOptions": {
+        "less-than-1-month": "< 1 mes",
+        "1-3-months": "1 a 3 meses",
+        "3-plus-months": "3+ meses"
+      }
+    },
+    "button": {
+      "submit": "Enviar Diagnóstico",
+      "submitting": "Enviando...",
+      "success": "¡Enviado con éxito!"
+    },
+    "successMessage": "¡Gracias! Me pondré en contacto dentro de 48 horas para programar una reunión de alineación inicial.",
+    "errorMessage": "Hubo un problema al enviar el formulario. Por favor, intente nuevamente o contácteme directamente.",
+    "footerNote": "Este formulario es el primer paso hacia un proyecto exitoso. Toda la información será tratada de manera confidencial."
+  },
+  "howWeWork": {
+    "title": "Cómo Trabajo",
+    "description": "Ejecuto un proceso transparente y colaborativo, asegurando que cada paso sea claro y esté alineado con sus objetivos.",
+    "steps": {
+      "step1": {
+        "title": "Diagnóstico",
+        "description": "Reunión de 30 min para alinear expectativas (sin costo)."
+      },
+      "step2": {
+        "title": "Propuesta Técnica",
+        "description": "Entrega de alcance detallado y cronograma en hasta 72h."
+      },
+      "step3": {
+        "title": "Desarrollo",
+        "description": "Entregas incrementales con retroalimentación constante."
+      },
+      "step4": {
+        "title": "Entrega",
+        "description": "Capacitación y entrega de todo el código/sistema y documentación."
+      }
+    },
+    "footer": "Trabajo con metodologías ágiles (Scrum/Kanban) y lo mantengo actualizado en cada fase del proyecto."
   }
 }

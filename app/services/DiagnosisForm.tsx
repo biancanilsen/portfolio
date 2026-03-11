@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { Input } from "@heroui/input";
 import { Select, SelectItem } from "@heroui/select";
 import { Button } from "@heroui/button";
@@ -10,35 +11,20 @@ import { Send } from "lucide-react";
 type FormData = {
   fullName: string;
   linkedinUrl: string;
+  email: string;
+  whatsapp: string;
+  company: string;
   solutionType: string;
   businessProblem: string;
   mustHaveFeatures: string;
   budget: string;
   timeline: string;
+  projectStage: string;
+  howMet: string;
 };
 
-const solutionTypes = [
-  { label: "Web App - Site", value: "web-app" },
-  { label: "Mobile App - Aplicativo", value: "mobile-app" },
-  { label: "MVP de SaaS", value: "mvp-saas" },
-  { label: "Automação/Bots", value: "automation-bots" },
-  { label: "Consultoria Técnica", value: "technical-consulting" },
-];
-
-const budgetOptions = [
-  { label: "~ - 5k", value: "0k-5k" },
-  { label: "R$ 5k - 10k", value: "5k-10k" },
-  { label: "R$ 10k - 30k", value: "10k-30k" },
-  { label: "Acima de R$ 30k", value: "30k-plus" },
-];
-
-const timelineOptions = [
-  { label: "< 1 mês", value: "less-than-1-month" },
-  { label: "1 a 3 meses", value: "1-3-months" },
-  { label: "3+ meses", value: "3-plus-months" },
-];
-
 export default function DiagnosisForm() {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -87,22 +73,99 @@ export default function DiagnosisForm() {
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error("Form submission error:", error);
-      setSubmitError(
-        "Houve um problema ao enviar o formulário. Por favor, tente novamente ou entre em contato diretamente.",
-      );
+      setSubmitError(t("diagnosisForm.errorMessage"));
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  // Build option arrays from translation keys
+  const solutionTypes = [
+    {
+      label: t("diagnosisForm.options.solutionTypes.web-app"),
+      value: "web-app",
+    },
+    {
+      label: t("diagnosisForm.options.solutionTypes.mobile-app"),
+      value: "mobile-app",
+    },
+    {
+      label: t("diagnosisForm.options.solutionTypes.mvp-saas"),
+      value: "mvp-saas",
+    },
+    {
+      label: t("diagnosisForm.options.solutionTypes.automation-bots"),
+      value: "automation-bots",
+    },
+    {
+      label: t("diagnosisForm.options.solutionTypes.technical-consulting"),
+      value: "technical-consulting",
+    },
+  ];
+
+  const budgetOptions = [
+    { label: t("diagnosisForm.options.budgetOptions.0k-5k"), value: "0k-5k" },
+    { label: t("diagnosisForm.options.budgetOptions.5k-10k"), value: "5k-10k" },
+    {
+      label: t("diagnosisForm.options.budgetOptions.10k-30k"),
+      value: "10k-30k",
+    },
+    {
+      label: t("diagnosisForm.options.budgetOptions.30k-plus"),
+      value: "30k-plus",
+    },
+  ];
+
+  const timelineOptions = [
+    {
+      label: t("diagnosisForm.options.timelineOptions.less-than-1-month"),
+      value: "less-than-1-month",
+    },
+    {
+      label: t("diagnosisForm.options.timelineOptions.1-3-months"),
+      value: "1-3-months",
+    },
+    {
+      label: t("diagnosisForm.options.timelineOptions.3-plus-months"),
+      value: "3-plus-months",
+    },
+  ];
+
+  const projectStageOptions = [
+    {
+      label: t("diagnosisForm.fields.projectStage.options.idea"),
+      value: "idea",
+    },
+    {
+      label: t("diagnosisForm.fields.projectStage.options.prototype"),
+      value: "prototype",
+    },
+    {
+      label: t("diagnosisForm.fields.projectStage.options.production"),
+      value: "production",
+    },
+  ];
+
+  const howMetOptions = [
+    {
+      label: t("diagnosisForm.fields.howMet.options.linkedin"),
+      value: "linkedin",
+    },
+    { label: t("diagnosisForm.fields.howMet.options.github"), value: "github" },
+    {
+      label: t("diagnosisForm.fields.howMet.options.referral"),
+      value: "referral",
+    },
+    { label: t("diagnosisForm.fields.howMet.options.other"), value: "other" },
+  ];
+
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white/5 dark:bg-black/5 rounded-2xl border border-default-200 shadow-lg">
       <h2 className="text-3xl font-bold mb-2 text-center">
-        Diagnóstico Estratégico
+        {t("diagnosisForm.title")}
       </h2>
       <p className="text-default-500 text-center mb-8 font-light">
-        Preencha os campos abaixo para que eu possa entender sua necessidade e
-        elaborar uma proposta personalizada.
+        {t("diagnosisForm.description")}
       </p>
 
       <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
@@ -114,9 +177,11 @@ export default function DiagnosisForm() {
               <Input
                 {...field}
                 isRequired
-                errorMessage={errors.fullName && "Nome é obrigatório"}
-                label="Nome Completo"
-                placeholder="Seu nome completo"
+                errorMessage={
+                  errors.fullName && t("diagnosisForm.fields.fullName.error")
+                }
+                label={t("diagnosisForm.fields.fullName.label")}
+                placeholder={t("diagnosisForm.fields.fullName.placeholder")}
                 variant="bordered"
               />
             )}
@@ -128,12 +193,107 @@ export default function DiagnosisForm() {
             render={({ field }) => (
               <Input
                 {...field}
-                description="Opcional, mas ajuda a conhecer seu perfil profissional"
-                label="Link do LinkedIn"
-                placeholder="https://linkedin.com/in/seu-perfil"
+                description={t("diagnosisForm.fields.linkedinUrl.description")}
+                label={t("diagnosisForm.fields.linkedinUrl.label")}
+                placeholder={t("diagnosisForm.fields.linkedinUrl.placeholder")}
                 variant="bordered"
               />
             )}
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Controller
+            control={control}
+            name="email"
+            render={({ field }) => (
+              <Input
+                {...field}
+                isRequired
+                errorMessage={
+                  errors.email && t("diagnosisForm.fields.email.error")
+                }
+                label={t("diagnosisForm.fields.email.label")}
+                placeholder={t("diagnosisForm.fields.email.placeholder")}
+                type="email"
+                variant="bordered"
+              />
+            )}
+            rules={{ required: true, pattern: /^\S+@\S+$/i }}
+          />
+          <Controller
+            control={control}
+            name="whatsapp"
+            rules={{
+              required: t("diagnosisForm.fields.whatsapp.error"),
+              pattern: {
+                value: /^\(\d{2}\) \d{5}-\d{4}$/,
+                message: t("diagnosisForm.fields.whatsapp.error"), // Ou uma chave de "formato inválido"
+              },
+            }}
+            render={({ field: { onChange, onBlur, value, ref } }) => (
+              <Input
+                ref={ref}
+                value={value}
+                onBlur={onBlur}
+                onChange={(e) => {
+                  // Lógica simples de máscara manual para não quebrar o DOM
+                  const val = e.target.value.replace(/\D/g, "").slice(0, 11);
+                  let masked = val;
+                  if (val.length > 2)
+                    masked = `(${val.slice(0, 2)}) ${val.slice(2)}`;
+                  if (val.length > 7)
+                    masked = `(${val.slice(0, 2)}) ${val.slice(2, 7)}-${val.slice(7)}`;
+                  onChange(masked);
+                }}
+                isRequired
+                label={t("diagnosisForm.fields.whatsapp.label")}
+                placeholder="(99) 99999-9999"
+                variant="bordered"
+                isInvalid={!!errors.whatsapp}
+                errorMessage={errors.whatsapp?.message}
+              />
+            )}
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Controller
+            control={control}
+            name="company"
+            render={({ field }) => (
+              <Input
+                {...field}
+                label={t("diagnosisForm.fields.company.label")}
+                placeholder={t("diagnosisForm.fields.company.placeholder")}
+                variant="bordered"
+              />
+            )}
+          />
+          <Controller
+            control={control}
+            name="projectStage"
+            render={({ field }) => (
+              <Select
+                isRequired
+                errorMessage={
+                  errors.projectStage &&
+                  t("diagnosisForm.fields.projectStage.error")
+                }
+                label={t("diagnosisForm.fields.projectStage.label")}
+                placeholder={t("diagnosisForm.fields.projectStage.placeholder")}
+                selectedKeys={field.value ? [field.value] : []}
+                variant="bordered"
+                onSelectionChange={(keys: any) =>
+                  field.onChange(Array.from(keys)[0] || "")
+                }
+              >
+                {projectStageOptions.map((opt) => (
+                  <SelectItem key={opt.value}>{opt.label}</SelectItem>
+                ))}
+              </Select>
+            )}
+            rules={{ required: true }}
           />
         </div>
 
@@ -144,10 +304,11 @@ export default function DiagnosisForm() {
             <Select
               isRequired
               errorMessage={
-                errors.solutionType && "Selecione um tipo de solução"
+                errors.solutionType &&
+                t("diagnosisForm.fields.solutionType.error")
               }
-              label="Tipo de Solução"
-              placeholder="Selecione uma opção"
+              label={t("diagnosisForm.fields.solutionType.label")}
+              placeholder={t("diagnosisForm.fields.solutionType.placeholder")}
               selectedKeys={field.value ? [field.value] : []}
               variant="bordered"
               onSelectionChange={(keys: any) =>
@@ -167,7 +328,8 @@ export default function DiagnosisForm() {
             className="block text-sm font-medium text-default-700 mb-2"
             htmlFor="businessProblem"
           >
-            Problema de Negócio <span className="text-danger">*</span>
+            {t("diagnosisForm.fields.businessProblem.label")}{" "}
+            <span className="text-danger">*</span>
           </label>
           <Controller
             control={control}
@@ -175,16 +337,24 @@ export default function DiagnosisForm() {
             render={({ field }) => (
               <textarea
                 {...field}
-                className="w-full p-3 border border-default-300 rounded-xl bg-transparent focus:border-primary focus:ring-1 focus:ring-primary outline-none transition"
+                className={`w-full p-3 border rounded-xl bg-transparent focus:border-primary focus:ring-1 focus:ring-primary outline-none transition ${
+                  errors.businessProblem
+                    ? "border-danger"
+                    : "border-default-300"
+                }`}
                 id="businessProblem"
-                placeholder="Qual dor ou processo você deseja resolver/automatizar?"
+                placeholder={t(
+                  "diagnosisForm.fields.businessProblem.placeholder",
+                )}
                 rows={4}
               />
             )}
             rules={{ required: true }}
           />
           {errors.businessProblem && (
-            <p className="text-danger text-sm mt-1">Descreva o problema</p>
+            <p className="text-danger text-sm mt-1">
+              {t("diagnosisForm.fields.businessProblem.error")}
+            </p>
           )}
         </div>
 
@@ -193,7 +363,8 @@ export default function DiagnosisForm() {
             className="block text-sm font-medium text-default-700 mb-2"
             htmlFor="mustHaveFeatures"
           >
-            Funcionalidades {"Must-Have"} <span className="text-danger">*</span>
+            {t("diagnosisForm.fields.mustHaveFeatures.label")}{" "}
+            <span className="text-danger">*</span>
           </label>
           <Controller
             control={control}
@@ -201,9 +372,15 @@ export default function DiagnosisForm() {
             render={({ field }) => (
               <textarea
                 {...field}
-                className="w-full p-3 border border-default-300 rounded-xl bg-transparent focus:border-primary focus:ring-1 focus:ring-primary outline-none transition"
+                className={`w-full p-3 border rounded-xl bg-transparent focus:border-primary focus:ring-1 focus:ring-primary outline-none transition ${
+                  errors.mustHaveFeatures
+                    ? "border-danger"
+                    : "border-default-300"
+                }`}
                 id="mustHaveFeatures"
-                placeholder="O que o sistema não pode deixar de ter?"
+                placeholder={t(
+                  "diagnosisForm.fields.mustHaveFeatures.placeholder",
+                )}
                 rows={4}
               />
             )}
@@ -211,7 +388,7 @@ export default function DiagnosisForm() {
           />
           {errors.mustHaveFeatures && (
             <p className="text-danger text-sm mt-1">
-              Liste as funcionalidades essenciais
+              {t("diagnosisForm.fields.mustHaveFeatures.error")}
             </p>
           )}
         </div>
@@ -224,10 +401,10 @@ export default function DiagnosisForm() {
               <Select
                 isRequired
                 errorMessage={
-                  errors.budget && "Selecione uma faixa de orçamento"
+                  errors.budget && t("diagnosisForm.fields.budget.error")
                 }
-                label="Orçamento (Budget)"
-                placeholder="Selecione uma faixa"
+                label={t("diagnosisForm.fields.budget.label")}
+                placeholder={t("diagnosisForm.fields.budget.placeholder")}
                 selectedKeys={field.value ? [field.value] : []}
                 variant="bordered"
                 onSelectionChange={(keys: any) =>
@@ -248,9 +425,11 @@ export default function DiagnosisForm() {
             render={({ field }) => (
               <Select
                 isRequired
-                errorMessage={errors.timeline && "Selecione um prazo"}
-                label="Prazo Estimado"
-                placeholder="Selecione um prazo"
+                errorMessage={
+                  errors.timeline && t("diagnosisForm.fields.timeline.error")
+                }
+                label={t("diagnosisForm.fields.timeline.label")}
+                placeholder={t("diagnosisForm.fields.timeline.placeholder")}
                 selectedKeys={field.value ? [field.value] : []}
                 variant="bordered"
                 onSelectionChange={(keys: any) =>
@@ -266,6 +445,31 @@ export default function DiagnosisForm() {
           />
         </div>
 
+        <Controller
+          control={control}
+          name="howMet"
+          render={({ field }) => (
+            <Select
+              isRequired
+              errorMessage={
+                errors.howMet && t("diagnosisForm.fields.howMet.error")
+              }
+              label={t("diagnosisForm.fields.howMet.label")}
+              placeholder={t("diagnosisForm.fields.howMet.placeholder")}
+              selectedKeys={field.value ? [field.value] : []}
+              variant="bordered"
+              onSelectionChange={(keys: any) =>
+                field.onChange(Array.from(keys)[0] || "")
+              }
+            >
+              {howMetOptions.map((opt) => (
+                <SelectItem key={opt.value}>{opt.label}</SelectItem>
+              ))}
+            </Select>
+          )}
+          rules={{ required: true }}
+        />
+
         <div className="flex justify-center pt-4">
           <Button
             className="min-w-48 bg-[#6371A2] text-white"
@@ -275,16 +479,16 @@ export default function DiagnosisForm() {
             type="submit"
           >
             {isSubmitting
-              ? "Enviando..."
+              ? t("diagnosisForm.button.submitting")
               : isSuccess
-                ? "Enviado com sucesso!"
-                : "Enviar Diagnóstico"}
+                ? t("diagnosisForm.button.success")
+                : t("diagnosisForm.button.submit")}
           </Button>
         </div>
 
         {isSuccess && (
           <p className="text-success text-center text-sm">
-            Obrigado! Entrarei em contato em até 48h para marcarmos uma reunião de alinhamento inicial.
+            {t("diagnosisForm.successMessage")}
           </p>
         )}
         {submitError && (
@@ -293,8 +497,7 @@ export default function DiagnosisForm() {
       </form>
 
       <p className="text-default-400 text-sm mt-8 text-center">
-        Este formulário é o primeiro passo para um projeto bem‑sucedido. Todas
-        as informações serão tratadas com confidencialidade.
+        {t("diagnosisForm.footerNote")}
       </p>
     </div>
   );
