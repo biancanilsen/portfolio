@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Potifólio Bianca Nilsen",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Potfólio Bianca Nilsen",
+  description: "Explore informações sobre meu trabalho e contato",
   navItems: [
     {
       label: "nav.home",
