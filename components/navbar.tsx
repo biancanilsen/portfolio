@@ -27,9 +27,19 @@ export const Navbar = () => {
   const { i18n, t } = useTranslation();
   const [mounted, setMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); // Novo estado
 
   useEffect(() => {
     setMounted(true);
+    
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); 
+    };
+
+    checkMobile(); 
+    window.addEventListener("resize", checkMobile);
+    
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const handleSelectionChange = (keys: any) => {
@@ -85,13 +95,19 @@ export const Navbar = () => {
       >
         <NavbarItem className="hidden sm:flex gap-2 items-center">
           <Link
-            isExternal
+            isExternal={!isMobile}
             aria-label="Linkedin"
             href={siteConfig.links.linkedin}
+            target={isMobile ? "_self" : "_blank"}
           >
             <LinkedinIcon className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+          <Link
+            isExternal={!isMobile}
+            aria-label="Github"
+            href={siteConfig.links.github}
+            target={isMobile ? "_self" : "_blank"}
+          >
             <GithubIcon className="text-default-500" />
           </Link>
 
@@ -126,6 +142,9 @@ export const Navbar = () => {
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
         <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
+        </Link>
+        <Link isExternal aria-label="Linkedin" href={siteConfig.links.github}>
+          <LinkedinIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
         <NavbarMenuToggle />
